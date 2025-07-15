@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "The Serpent & the Wings of Night",
+      "image": "./images/",
+      "price": 650
+    },
+    {
+      "id": 2,
+      "name": "A Shadow in the Ember",
+      "image": "./images/",
+      "price": 1200
+    },
+    {
+      "id": 3,
+      "name": "The Planted Prisoner",
+      "image": "./images/",
+      "price": 950
+    },  
+    {
+      "id": 4,
+      "name": "The Nightborn Duet",
+      "image": "./images/",
+      "price": 800
+    }  
+  ]
+}

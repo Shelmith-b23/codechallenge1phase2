@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import AddBookForm from "./AddBookForm";
+import BookstorePanelAdmin from "./BookstorePanelAdmin";
 
 function App() {
+  const [books, setBooks] = useState([]);
+  
+
+  useEffect(() => {fetch("http://localhost:6001/books")
+    .then((r) => r.json())
+    .then((data) => setBooks(data));
+  },[]);
+
+  function handleAddBook(newBook) {
+    setBooks([...books, newBook]);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BookstorePanelAdmin books = {books}/>
     </div>
+
+    
   );
 }
 
